@@ -23,6 +23,10 @@ public:
         out << "My nodes values:" << endl;
 
         for (unsigned i = 0; i < node.getOtherNodes().size(); i++) {
+            if (node.getOtherNodes().at(i)->getData() == NULL) {
+                out << "NULL pointer, iteration: " << i << endl;
+                continue;
+            }
             out << node.getOtherNodes().at(i)->getData() << endl;
         }
         return out;
@@ -44,6 +48,10 @@ public:
     }
 
     void addNeighbour(Node<T> *other) {
+        if (other == NULL) {
+            std::cout << "NULL pointer!" << endl;
+            return;
+        }
         this->otherNodes.push_back(other);
         std::cout << "Node #" << this->id << " added new node the the list (node #" << other->getId() << ")" << endl;
     }
