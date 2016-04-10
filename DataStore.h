@@ -60,9 +60,6 @@ public:
 
 };
 
-/*std::ostream& operator<< (std::ostream &out, const DataStore &dataStore) {
-
-}*/
 
 
 #endif //GRAFY_DATASTORE_H
