@@ -40,8 +40,8 @@ public:
     }
 
     // getters and setters
-    T getData() const {
-        return data;
+    T getData() {
+        return this->data;
     }
 
     void setData(T data) {

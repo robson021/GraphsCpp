@@ -16,8 +16,5 @@ int main() {
 
     node2->setData(dataStore);
 
-    DataStore d2 = node2->getData();
-    cout << "Data:\n" << d2 << endl;
-
     return 0;
 }
