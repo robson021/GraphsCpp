@@ -47,6 +47,7 @@ public:
         this->id = ++id_counter;
     }
 
+    // methods
     void addNeighbour(Node<T> *other) {
         if (other == NULL) {
             std::cout << "NULL pointer!" << endl;
