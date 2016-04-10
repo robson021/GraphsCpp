@@ -54,6 +54,11 @@ int main() {
     node6->deleteNeighbour(node3);
     cout << *node3 << endl;
 
+    Node<double> *node7 = NULL;
+    node3->deleteNeighbour(node7);
 
+
+
+    cout<<"END"<<endl;
     return 0;
 }
