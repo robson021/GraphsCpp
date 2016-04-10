@@ -15,7 +15,8 @@ int main() {
     cout << dataStore << endl;
 
     node2->setData(dataStore);
-    //cout << node2->getData(); //TODO causes 139 exit status. fix it
+    DataStore d = node2->getData();
+    cout << "datastore object got from Node: " << d;
 
     // oveload example
 
