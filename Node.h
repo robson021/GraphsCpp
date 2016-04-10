@@ -5,6 +5,7 @@
 #ifndef GRAFY_NODE_H
 #define GRAFY_NODE_H
 
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -14,7 +15,7 @@ class Node {
     static long id_counter;
     T data;
     long id;
-    std::vector<Node *> otherNodes;
+    std::vector<Node<T> *> otherNodes;
 
 public:
 
@@ -33,6 +34,10 @@ public:
         this->id = ++id_counter;
     }
 
+    void addNeighbour(Node<T> *other) {
+        this->otherNodes.push_back(other);
+        std::cout << "Node #" << this->id << " added new node the the list" << endl;
+    }
 
     // getters and setters
     T getData() const {
@@ -41,6 +46,7 @@ public:
 
     void setData(T data) {
         Node::data = data;
+        cout << "Data set. " << data << endl;
     }
 
     long getId() const {
