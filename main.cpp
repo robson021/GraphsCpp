@@ -56,6 +56,7 @@ int main() {
 
     Node<double> *node7 = NULL;
     node3->deleteNeighbour(node7);
+    node3->addNeighbour(node7);
 
 
 
