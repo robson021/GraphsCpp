@@ -56,6 +56,22 @@ public:
         std::cout << "Node #" << this->id << " added new node the the list (node #" << other->getId() << ")" << endl;
     }
 
+    void deleteNeighbour(Node<T> *toDelete) {
+        if (toDelete == NULL) {
+            std::cout << "NULL pointer!" << endl;
+            return;
+        }
+
+        for (unsigned i = 0; i < otherNodes.size(); i++) {
+            if (otherNodes.at(i) == toDelete) {
+                otherNodes.erase(otherNodes.begin() + i);
+                cout << "Node delete at index: " << i << endl;
+            }
+        }
+
+        //toDelete->deleteNeighbour(this);
+    }
+
     // getters and setters
     T getData() {
         return this->data;

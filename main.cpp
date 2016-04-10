@@ -34,6 +34,7 @@ int main() {
     Node<double> *node3 = new Node<double>(5.8);
     Node<double> *node4 = new Node<double>(2.7);
     Node<double> *node5 = new Node<double>(7.1);
+    Node<double> *node6 = new Node<double>(2.3);
 
     node3->addNeighbour(node4);
     node4->addNeighbour(node3);
@@ -44,6 +45,14 @@ int main() {
     cout << *node4 << endl;
     cout << *node5 << endl;
 
+    node3->addNeighbour(node6);
+    node6->addNeighbour(node3);
+    cout << *node3 << endl;
+
+    cout << "after delete:" << endl;
+    node3->deleteNeighbour(node6);
+    node6->deleteNeighbour(node3);
+    cout << *node3 << endl;
 
 
     return 0;
