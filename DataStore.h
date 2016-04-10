@@ -18,6 +18,7 @@ class DataStore {
 public:
     friend std::ostream &operator<<(std::ostream &out, const DataStore &dataStore) {
         out << "DataStore (" << dataStore.text << "; " << dataStore.number << ")" << endl;
+        return out;
     }
 
 
@@ -50,6 +51,7 @@ public:
     DataStore operator+(const DataStore &dataStore) {
         this->text += dataStore.text;
         this->number += dataStore.number;
+        return *this;
     }
 
     DataStore &operator=(const DataStore &dataStore) {
