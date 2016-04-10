@@ -52,9 +52,11 @@ public:
         this->number += dataStore.number;
     }
 
-    DataStore operator=(const DataStore &dataStore) {
+    DataStore &operator=(const DataStore &dataStore) {
         this->text = dataStore.text;
         this->number = dataStore.number;
+
+        return *this;
     }
 
 
