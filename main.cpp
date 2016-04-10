@@ -29,6 +29,23 @@ int main() {
     dataStore1 = dataStore2;
     cout << dataStore1;
 
+    cout << "GRAPH:" << endl;
+
+    Node<double> *node3 = new Node<double>(5.8);
+    Node<double> *node4 = new Node<double>(2.7);
+    Node<double> *node5 = new Node<double>(7.1);
+
+    node3->addNeighbour(node4);
+    node4->addNeighbour(node3);
+    node3->addNeighbour(node5);
+    node5->addNeighbour(node3);
+
+    cout << *node3 << endl;
+    cout << *node4 << endl;
+    cout << *node5 << endl;
+
+
+
 
     return 0;
 }

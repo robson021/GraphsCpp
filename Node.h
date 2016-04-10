@@ -18,6 +18,15 @@ class Node {
     std::vector<Node<T> *> otherNodes;
 
 public:
+    friend std::ostream &operator<<(std::ostream &out, const Node<T> &node) {
+        out << "My id: " << node.getId() << endl;
+        out << "My nodes values:" << endl;
+
+        for (unsigned i = 0; i < node.getOtherNodes().size(); i++) {
+            out << node.getOtherNodes().at(i)->getData() << endl;
+        }
+        return out;
+    }
 
     // constructors
     Node() {
@@ -36,7 +45,7 @@ public:
 
     void addNeighbour(Node<T> *other) {
         this->otherNodes.push_back(other);
-        std::cout << "Node #" << this->id << " added new node the the list" << endl;
+        std::cout << "Node #" << this->id << " added new node the the list (node #" << other->getId() << ")" << endl;
     }
 
     // getters and setters
